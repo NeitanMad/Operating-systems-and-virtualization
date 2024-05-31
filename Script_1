@@ -1,0 +1,10 @@
+read -p"Укажите путь: " DELDIR
+
+if[-e $DELDIR]
+	then
+		cd $DELDIR
+		find . -name "*.bak" -type f -delete
+		find . -name "*.tmp" -type f -delete
+		find . -name "*.backup" -type f -delete
+	else
+		exit
